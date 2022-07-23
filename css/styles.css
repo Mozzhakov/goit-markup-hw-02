@@ -5,6 +5,15 @@
 футер бекграунд #2F303A
 футер контакты rgba(255, 255, 255, 0.6)
 команда бекграунд #F5F4FA
+
+
+#EEEEEE
+#000000
+#F5F4FA
+rgba(255, 255, 255, 0.6)
+#2F303A
+#ECECEC
+
 */
 :root {
   --primary-text-color: #757575;
@@ -12,18 +21,29 @@
   --accent-color: #2196f3;
   --primary-white-color: #ffffff;
   --secondary-bg-color: #f5f4fa;
+  --team-bg-color: #f5f4fa;
+  --footer-bg-color: #2f303a;
+  --main-btn-hover-color: #188ce8;
+  --main-font-family: 'Roboto', sans-serif;
+  --secindary-font-family: 'Raleway', sans-serif;
 }
 
 body {
   background-color: var(--primary-white-color);
   color: var(--primary-text-color);
 
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--main-font-family);
+  font-size: 14px;
   letter-spacing: 0.03em;
+  line-height: 1.71;
 }
 
 .list {
   list-style: none;
+}
+
+.link {
+  text-decoration: none;
 }
 
 /* Header */
@@ -32,7 +52,7 @@ body {
   color: #000000;
   text-decoration: none;
 
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--secindary-font-family);
   font-size: 26px;
   line-height: 1.19;
 }
@@ -87,43 +107,38 @@ body {
   text-transform: uppercase;
 }
 
-.button {
-  background-color: var(--primary-white-color);
-  color: var(--primary-text-color);
-
+button {
+  font-size: 16px;
   font-family: inherit;
 
   cursor: pointer;
 }
 
-.button.primary {
+.button-primary {
   font-weight: 700;
-  font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.06em;
-}
-
-.button.primary:hover,
-.button.primary:focus {
-    background-color: #188CE8;
-}
-
-.button.secondary {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
-}
-
-.button.primary,
-.button.secondary:hover,
-.button.secondary:focus {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
 }
 
-.button.secondary {
+.button-primary:hover,
+.button-primary:focus {
+  background-color: var(--main-btn-hover-color);
+}
+
+.button-secondary {
+  font-weight: 500;
+  line-height: 1.62;
+  letter-spacing: inherit;
   background-color: var(--secondary-bg-color);
   color: var(--title-text-color);
+}
+
+.button.secondary:hover,
+.button.secondary:focus {
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
 }
 
 /* Features */
@@ -158,14 +173,14 @@ body {
 /* Team */
 
 .section.team {
-  background-color: #f5f4fa;
+  background-color: var(--team-bg-color);
 }
 
 .section.team li {
   width: 270px;
   height: 368px;
 
-  background-color: #ffffff;
+  background-color: var(--primary-white-color);
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -181,14 +196,14 @@ body {
 /* Footer */
 
 .footer {
-  background-color: #2f303a;
+  background-color: var(--footer-bg-color);
 }
 
 .footer-logo {
   color: var(--primary-white-color);
   text-decoration: none;
 
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--secindary-font-family);
   font-size: 26px;
   line-height: 1.19;
 }
