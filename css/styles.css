@@ -24,6 +24,7 @@ rgba(255, 255, 255, 0.6)
   --team-bg-color: #f5f4fa;
   --footer-bg-color: #2f303a;
   --main-btn-hover-color: #188ce8;
+  --footer-contacts-color: rgba(255, 255, 255, 0.6);
   --main-font-family: 'Roboto', sans-serif;
   --secindary-font-family: 'Raleway', sans-serif;
 }
@@ -35,7 +36,6 @@ body {
   font-family: var(--main-font-family);
   font-size: 14px;
   letter-spacing: 0.03em;
-  line-height: 1.71;
 }
 
 .list {
@@ -135,8 +135,8 @@ button {
   color: var(--title-text-color);
 }
 
-.button.secondary:hover,
-.button.secondary:focus {
+.button-secondary:hover,
+.button-secondary:focus {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
 }
@@ -168,6 +168,10 @@ button {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+}
+
+.feature-list p {
+  line-height: 1.71;
 }
 
 /* Team */
@@ -221,7 +225,7 @@ button {
 }
 
 .footer-contacts {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--footer-contacts-color);
 }
 
 .address-map:hover,
